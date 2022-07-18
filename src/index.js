@@ -8,7 +8,12 @@ export const setItem = (secret, key, value) => {
 
 export const getItem = (secret, key) => {
   const encrypted = localStorage.getItem(key);
-  return decrypt(secret, encrypted);
+  if(encrypted != null) {
+    return decrypt(secret, encrypted);
+  } else {
+    return null;
+  }
+  
 }
 
 
