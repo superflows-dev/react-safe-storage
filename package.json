@@ -49,5 +49,15 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "storage",
+    "local",
+    "localstorage",
+    "safe",
+    "secure",
+    "encryption",
+    "session"
   ]
 }

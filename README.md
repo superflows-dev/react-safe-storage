@@ -10,19 +10,33 @@
 npm install --save react-safe-storage
 ```
 
+## Dependencies
+
+This module is pure javascript code and does not have any depencencies
+
+
+## Security
+
+It is a simple cipher based utility and does not guarantee military grade security. But it does not have any dependencies on any external library and does the job.
+
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
 
-import MyComponent from 'react-safe-storage'
-import 'react-safe-storage/dist/index.css'
+import React from 'react'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+import { getItem, setItem } from 'react-safe-storage'
+
+const App = () => {
+
+  setItem('sdfsdf23434sd#4', 'email', 'hrus********e@gmail.com')
+  console.log(getItem('sdfsdf23434sd#4', 'email'));
+
+  return <div>Hello Safe Storage</div>
 }
+
+export default App
+
 ```
 
 ## License
