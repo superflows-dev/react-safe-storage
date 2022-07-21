@@ -19,6 +19,28 @@ This module is pure javascript code and does not have any depencencies
 
 It is a simple cipher based utility and does not guarantee military grade security. But it does not have any dependencies on any external library and does the job.
 
+## Configuration
+
+This component needs a secret passphrase that is used for ciphering and deciphering. Ideally, the secret passphrase should come from environment variables.
+
+## Functionality
+
+```jsx
+
+/*
+
+secret_passphrase: secret password used for ciphering & deciphering
+key: key for local storage
+value: value to be stored in local storage for the specified key
+
+*/
+
+setItem('secret_passphrase', 'key', 'value') {}
+getItem('secret_passphrase', 'key') {}
+
+```
+
+
 ## Usage
 
 ```jsx
@@ -29,8 +51,8 @@ import { getItem, setItem } from 'react-safe-storage'
 
 const App = () => {
 
-  setItem('sdfsdf23434sd#4', 'email', 'hrus********e@gmail.com')
-  console.log(getItem('sdfsdf23434sd#4', 'email'));
+  setItem('secret_passphrase', 'email', 'hrus********e@gmail.com')
+  console.log(getItem('secret_passphrase', 'email'));
 
   return <div>Hello Safe Storage</div>
 }
